@@ -26,3 +26,26 @@ nav a { margin-left: 14px; text-decoration: none; font-weight: 600; }
 .section { margin-top: 24px; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .success-msg { display: none; color: green; margin-top: 10px; }
+
+/* Responsive adjustments for small screens */
+@media (max-width: 720px) {
+  .container { padding: 12px; }
+  .header { flex-direction: column; align-items: flex-start; gap: 12px; }
+  nav { width: 100%; }
+  nav a { display: inline-block; margin-left: 0; margin-right: 12px; }
+
+  .hero { grid-template-columns: 1fr; }
+  .hero .side-card { order: 2; }
+  .hero-text { order: 1; }
+
+  .features { flex-direction: column; gap: 8px; }
+  .btn, .btn-primary, .btn-outline { display: block; width: 100%; text-align: center; }
+
+  .grid2 { grid-template-columns: 1fr; }
+  .card { padding: 12px; }
+
+  h1, h2, h3, h4 { line-height: 1.2; }
+  h2 { font-size: 1.25rem; }
+
+  .hero { gap: 12px; }
+}
