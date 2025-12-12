@@ -6,7 +6,7 @@ function sendWhatsApp(e) {
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
-  const whatsappNumber = "249XXXXXXXX"; // ضع رقمك هنا
+  const whatsappNumber = "249905661400"; // ضع رقمك هنا
 
   const text =
 `الاسم: ${name}
