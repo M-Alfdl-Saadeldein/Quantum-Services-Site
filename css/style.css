@@ -25,6 +25,8 @@ body{
 .header{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo h1{margin:0;font-size:1.25rem;letter-spacing:0.2px}
 .logo small{display:block;color:var(--muted);font-size:0.8rem}
+.logo{display:flex;align-items:center;gap:12px}
+.site-logo{width:56px;height:56px;object-fit:contain;border-radius:8px;box-shadow:0 8px 20px rgba(11,35,64,0.06);background:linear-gradient(180deg,#fff,#f7fbff)}
 nav{display:flex;gap:12px}
 nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
 nav a:hover{background:rgba(11,116,222,0.08);color:var(--primary)}
@@ -84,6 +86,9 @@ input:focus,textarea:focus{outline:none;box-shadow:0 6px 20px rgba(11,116,222,0.
 /* Hamburger button and mobile nav */
 .nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;border:0;background:transparent;cursor:pointer}
 .nav-toggle .bar{display:block;width:22px;height:2px;background:#0b2340;margin:3px 0;border-radius:2px;transition:transform .18s ease, opacity .18s ease}
+.nav-toggle.open .bar:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.nav-toggle.open .bar:nth-child(2){opacity:0}
+.nav-toggle.open .bar:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
 
 /* show toggle on small screens */
 @media (max-width:920px){

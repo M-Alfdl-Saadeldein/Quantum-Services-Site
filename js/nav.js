@@ -17,6 +17,7 @@
     document.body.classList.add('no-scroll');
     toggle.setAttribute('aria-expanded','true');
     mobileNav.setAttribute('aria-hidden','false');
+    toggle.classList.add('open');
   }
 
   function closeNav(){
@@ -24,6 +25,7 @@
     document.body.classList.remove('no-scroll');
     toggle.setAttribute('aria-expanded','false');
     mobileNav.setAttribute('aria-hidden','true');
+    toggle.classList.remove('open');
   }
 
   toggle.addEventListener('click', ()=>{
