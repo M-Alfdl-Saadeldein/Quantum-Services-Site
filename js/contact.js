@@ -20,5 +20,25 @@ function sendWhatsApp(e) {
 
   window.open(url, "_blank");
 
-  document.getElementById("msg").style.display = "block";
+  const msgEl = document.getElementById("msg");
+  msgEl.style.display = "block";
+  msgEl.style.opacity = 0;
+  msgEl.style.transition = "opacity .28s ease, transform .28s ease";
+  msgEl.style.transform = "translateY(-6px)";
+  requestAnimationFrame(() => {
+    msgEl.style.opacity = 1;
+    msgEl.style.transform = "translateY(0)";
+  });
+
+  // reset form after a short delay so user sees the message
+  setTimeout(() => {
+    document.getElementById("contactForm").reset();
+  }, 500);
+
+  // hide message after 6s
+  setTimeout(() => {
+    msgEl.style.opacity = 0;
+    msgEl.style.transform = "translateY(-6px)";
+    setTimeout(() => { msgEl.style.display = "none"; }, 300);
+  }, 6000);
 }
